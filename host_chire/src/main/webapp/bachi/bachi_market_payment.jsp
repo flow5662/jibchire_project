@@ -15,6 +15,15 @@
 .payment-title{padding: 15px 0px 15px 0px;}
 .product{padding: 10px 0px 10px 0px;}
 .product-option li{display: flex;flex-direction: row;gap: 50px;}
+ input[type="button"]{
+	margin-top:10px;
+    width: 94px;
+    height: 40px;
+    color: white;
+    background-color: #789849;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;}
 </style>
 <body>
  <div class="wrap">
