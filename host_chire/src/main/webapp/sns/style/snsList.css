@@ -1,0 +1,65 @@
+/*reset css*/
+* { margin : 0 ; padding : 0 ; font-family: 'NanumSquare';} 
+a { text-decoration : none; }
+
+/*전체구조*/
+#wrap{width:1280px; margin:0 auto;}
+#title{text-align: center;     margin-top: 30px;    height: 30px;}
+#snsthunbnail ul{width : 1280px; margin : 10px auto; }
+#snsthunbnail li{display: inline-block; width: 370px; height: 500px;  border: 1px solid white; margin: 25px; overflow: hidden; 
+			 box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+ 			 transition: all 0.3s cubic-bezier(.25,.8,.25,1); border-radius: 10px;}
+			/*height를 650을 주면 사진크기가 370*450정도롤 들어갈 수 있긴 한데 전체적으로 너무 길어보여서..*/
+#snsthunbnail li:hover{ box-shadow: 0 14px 18px rgba(29, 31, 25, 0.23), 0 10px 10px rgba(29, 31, 25, 0.23);}
+#topmiddle{position:relative; top:-80px;}	
+#writing{position: relative; top: -100px;  left: 583px;width: 100px;height: 40px; background-color:#C0C0C0; border-radius: 5px;}
+		
+/*박스 안의 세부구조*/
+.snstitle{width: 95%; height: 10%; border: 1px solid white; margin: 10px auto 0 auto; }
+.thumbnail{width: 350px; height: 70%;  border: 1px solid white; margin: 10px auto 0 auto; overflow: hidden;}
+			/* 사진이 잘리는 크기와 일치하기 때문에, 이 css와 WriteAction의 BufferdImage()내의 값은 동일할 것 */
+.thumbnail>img{object-fit:cover; border-radius: 5px;}
+.txt{width: 95%; height: 10%; border: 1px solid white; margin: 10px auto 0 auto; }
+
+/*회원사진,아이디*/
+.snstitle .custpic{float: left; width: 50px; height: 100%; overflow:hidden; background-color:#C0C0C0; border-radius: 50%;}
+.snstitle span{position: relative; top:29%; left: 3%;}
+
+/*해시테그, 조회수, 좋아요*/
+.txt .read{height: 85%; overflow: hidden;}
+.txt .buttonlike{z-index:10; float: right; width: 25px; height: 25px; /*background-color:#C0C0C0; border-radius: 50%;*/}
+.txt .buttonfollow{float: right; width: 25px; height: 25px;}
+
+/*메뉴안의 검색창*/
+#search{	margin:20px auto;width: 310px;	height: 50px;}
+#search-box{padding: 5px;box-shadow: 0px 0px .5px 1px #99CCFF;	width: 293px; height: 30px;	
+		background-color: #fff;	border: 1px solid #99CCFF;	border-radius: 30px;transition: 0.4s;	}
+		/* 위에서 검색창 자체의 길이조정*/
+#search-txt{display: flex;padding: 0;width: 240px;border:none;background: none;	outline: none;	float: left;
+		font-size: 11pt;line-height: 30px;transition: .4s;	padding-left: 10px;	}
+#search-btn{text-decoration: none;float: right;	width: 30px;height: 30px;background-color: #fff;border-radius: 50%;
+		display: flex;justify-content: center;align-items: center;color: #926b61; border: 1px solid #99CCFF;	}		
+		
+/*메뉴 안의 해시테그 공간*/
+#dungdung{width: 80%; height: 50%; margin: 0 auto; border: 1px solid white;}
+#dung{color:#99CCFF; position:absolute; top:150px; left:220px; animation:dungdung1 3s infinite alternate; }
+#dung1{color:skyblue; position:absolute; top:100px; left:120px; animation:dungdung1 2s infinite alternate; }
+#dung2{color:#99CCFF;font-size:15pt; position:absolute; top:140px; left:40px; animation:dungdung1 3s infinite alternate; }
+#dung3{color:skyblue; position:absolute; top:155px; left:240px; animation:dungdung2 4s infinite alternate; }
+#dung4{color:#99CCFF; position:absolute; top:96px; left:260px; animation:dungdung2 3s infinite alternate; }
+@keyframes dungdung1{
+   0%{transform:translate(0,0);}
+   100%{transform:translate(0,30px);}
+}
+@keyframes dungdung2{
+   0%{transform:translate(0,0);}
+   100%{transform:translate(0,-20px);}
+}    
+
+/*페이징*/
+#pageList{text-align: center;}
+
+/*글이 없을 때 */
+#emptyArea{     width: 370px;    height: 100px;    border: 1px solid white;    margin: 10px auto;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    border-radius: 10px;    text-align: center;    font-weight: 600;}

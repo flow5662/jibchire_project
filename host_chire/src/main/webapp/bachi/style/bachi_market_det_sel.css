@@ -1,0 +1,301 @@
+@charset "UTF-8";
+.wrap{
+	margin-left:auto;
+	margin-right:auto;
+}
+.market_section{width:1280px;margin-left:auto;margin-right:auto;}
+.css-section-market-re{
+display: flex;
+    margin-top: 0;
+    background: none;
+    padding-top: 3rem;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.css-gosu_menus{font-size: .75rem;
+    margin-bottom: 0;}
+.css-bord-menu{flex-wrap: wrap;
+    display: flex;
+    font-size: .875rem;
+    height: 50px;
+}
+.no-space{padding-top: 0;
+    padding-bottom: 0;}
+.flex-aside-left{  max-width: 60rem;
+    padding-bottom: 2rem;}
+.flex-aside-right{width: 31rem;
+    z-index: 1;  position: relative;}
+.product-title{font-size: 1.5rem;}
+
+.product-option{ 
+    display: flex;
+    padding: 0;
+}
+.css-option-body{
+	max-height: 350px;
+    padding: 0;
+    overflow-y: auto;
+}
+.css-option-box{
+width: 90%;
+display: flex;
+    flex-direction: column;
+    border: 0.0625rem solid #e1e1e1;
+    border-radius: 8px;
+    margin-bottom: 0.75rem;
+    padding: 1rem;
+}
+
+.css-option-title{
+	text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;}
+.css-option-price{margin-top: 1rem;
+    font-size: 1.25rem;}
+.css-option-text{    display: flex;flex-direction: column;}
+.css-button-submit{
+display: flex;
+justify-content: space-evenly;
+    padding-top: 30px;
+}
+.css-button-sub{
+width: 490px;
+    height: 60px;
+    background-color:#789849;
+    color: white;
+    border: none;
+    border-radius: 10px;
+}
+.css-button-history-delete{
+ padding-top: 30px;
+display: flex;
+justify-content: space-between;
+}
+.css-button-his{
+width: 230px;
+height: 50px;
+    border: 1px solid lightgray;
+    
+    border-radius: 10px;
+    }
+.css-button-del{
+width: 230px;
+height: 50px;
+    background-color:#b1ac93;
+    color: white;
+    border: none;
+    border-radius: 10px
+    
+}
+.css-section-bottom{
+display: flex;
+justify-content: space-between;
+padding-top: 30px;
+position: sticky; /*고정*/
+top: 0;
+background-color: white;
+}
+.css-section-text{
+display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    border: none;
+    padding: 0 98px;
+    margin-bottom: 0;
+    border-bottom: 2px solid #ddd;
+}
+.css-text-name{
+display: flex;
+align-items: center;
+}
+.text-det{
+        font-size: 16pt;
+    font-weight: 700;
+    color: #323232;
+	cursor: pointer;
+}
+.css-section-bottom-area{
+
+height: auto;
+padding-bottom: 20px;
+}
+.css-market-sangse-text{
+
+padding-top:50px;
+height: auto;
+}
+.gosu-user-img{
+width: 5rem;
+    height: 5rem;
+    border-radius: 50px;
+    margin-right: 0.75rem;
+    background-color: gray;
+}
+.gosu-user{
+display: flex;
+align-items: center;
+padding-bottom: 50px;
+
+}
+.gosu-user-id{
+display: flex;
+flex-direction: column;
+}
+.gosu-user-adrress{
+display: flex;
+align-items: flex-end;
+}
+.ad{
+width: 4.375rem;
+    margin-right: 2rem;
+    font-size: .875rem;
+    color: #737373;
+}
+.user-text-section-gosu{
+margin-bottom: 0;
+    font-size: .875rem;
+    white-space: pre-line;
+        width: 750px;
+    
+}
+.flex-controller{
+padding-bottom: 10px;	
+	
+}
+.css-option-body{
+	    padding-bottom: 20px;
+    padding-top: 20px;
+	
+}
+.flex-aside-right-list{
+display: flex;
+    flex-direction: column;
+    position: sticky;
+    top: 6.5rem;
+    z-index: 999;
+    max-height: calc(100vh - 6.5rem);
+}
+.section-title{
+	    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+}
+.market-review{
+	width:100%;
+	display: flex;
+	align-items: center;
+}
+.market-review-img{
+	
+    padding: 10px 10px 10px 10px;
+    margin: 10px 0px 10px 0px;
+}
+.slider-container {
+	width: 750px;
+    height: 150px;
+  overflow: hidden; /* 너비를 초과하는 내용 숨김 */
+  position: relative;
+}
+.slider {
+  display: flex;
+  gap: 3px;
+  transition: transform 0.5s ease; /* 슬라이드 효과를 위한 애니메이션 트랜지션 설정 */
+}
+
+.slider img {
+  width: 100%;
+  height: auto;
+}
+
+.prev-button,
+.next-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-size: 24px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.prev-button {
+  left: 0;
+}
+
+.next-button {
+  right: 0;
+}
+.market-review-text{
+	margin-bottom: 0;
+    font-size: .875rem;
+    white-space: pre-line;
+    width: 750px;
+    padding-bottom: 20px;
+}
+.review-user-img{
+width: 3rem;
+    height: 3rem;
+    border-radius: 50px;
+    margin-right: 0.75rem;
+    background-color: gray;
+}
+.market-review-none{
+	display: flex;
+	padding: 0px 0px 30px;
+}
+.market-request{
+	width: 750px;
+	background-color: #eeeeee;
+	 border-radius: 5px;
+	 padding: 10px;
+}
+.market-request-gosu_id{
+	font-size: 10pt;
+	padding-bottom: 10px;
+}
+.custom-control .custom-radio{
+	 padding: 0;
+}
+input[type=checkbox], input[type=radio] {
+    box-sizing: border-box;
+    padding: 0;
+}
+.custom-control-input {
+    position: absolute;
+    width: 1.25rem;
+    z-index: 99999;
+    height: 1.375rem;
+    opacity: 0;
+}
+.custom-control-label {
+    position: relative;
+    margin-bottom: 0;
+    vertical-align: top;
+    cursor: pointer;
+}
+label {
+    display: inline-block;
+    margin-bottom: 0.5rem;
+}
+.custom-control.custom-radio .custom-control-label {
+    width: 100%;
+    height: 100%;
+    padding-left: 2rem;
+}
+input[type="radio"]+.custom-control-label{
+	background:url(../img/gosu/icon/check_before.svg) no-repeat 0%;
+
+}
+input[type="radio"]:checked+.custom-control-label{
+	background:url(../img/gosu/icon/check_after.svg) no-repeat 0%;
+}
+.custom-control{
+	position: relative;
+    display: block;
+    min-height: 1.5rem;
+    padding-left: 2rem;
+}
+.custom-control.custom-radio{
+    padding: 0;
+}

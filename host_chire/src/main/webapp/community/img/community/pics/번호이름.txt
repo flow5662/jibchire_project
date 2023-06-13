@@ -1,0 +1,15 @@
+100번 : 370px 450px => sns피드  
+200번 : 370px 370px => sns 피드 중앙 맨 위
+300번 : 400px 500px  => 슬라이더 사진
+
+500번 : 850px 500px => 메인
+700번 : 100px 70px => 썸네일 속 상품사진
+900번 : 60px 60px => 프로필사진
+
+
+nav a:nth-child(1):hover ~ #indicator{    left: 1%;     background: #FFF4E5;}
+nav a:nth-child(2):hover ~ #indicator{    left: 15%;    background: #FFF4E5;}
+nav a:nth-child(3):hover ~ #indicator{    left: 29%;    background: #FFF4E5;}
+nav a:nth-child(4):hover ~ #indicator{    left: 44%;    background: #FFF4E5;}
+nav a:nth-child(5):hover ~ #indicator{    left: 58%;    background: #FFF4E5;}
+nav a:nth-child(6):hover ~ #indicator{    left: 72%;    background: #FFF4E5;}

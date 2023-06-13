@@ -1,0 +1,39 @@
+
+/* reset css */ 
+* { margin : 0 ; padding : 0 ; } 
+body,input, select{ font-family: 'NanumSquare';}
+
+
+#wrap{width: 1280px; margin: 0 auto;}
+
+table{margin: 0 auto;}
+thead{	font-size: 20pt; color: #353535; font-weight: Bold; text-align: center;	height: 80px; } 
+
+td input[type=text]{ border : 2px solid lightgrey; padding-left: 1em; height:50px;}
+input[type=password]{ border : 2px solid lightgrey; padding-left: 1em; height:50px;}
+input[type=button]{	border: solid 2px #E9E9E9; background-color: #E9E9E9; width: 120px;height: 52px;}
+input[type=submit]{	border: solid 2px #E9E9E9; background-color: #E9E9E9; width: 120px;height: 52px;}
+#forward{	border: solid 2px #E9E9E9; background-color: #E9E9E9; width: 120px;height: 52px;}
+select{ border : 2px solid lightgrey; height:53px; }
+tr,td{ height:45px; padding-top: 10px; }
+img{ width : 20px; height: 20px; align :center; valign:center; }
+i{font-size: 10pt; color: #980000; overflow: hidden; padding-left: 0.5em; }
+
+.menu{	font-size: 11pt;	color: #191919;	height: 50px; }
+.idcheck{ height:10px; margin: 0; padding: 0;}
+.pwcheck{ height:10px; margin: 0; padding: 0;}
+.txtfield{	width: 525px;}
+.submenu{width: 100px;}
+#id{	width: 400px; }
+#year,#month,#date{width: 120px;}
+#month,#date{margin-left: 15px;}
+.cell{	width: 120px;}
+#cellphone{	width: 265px;  }
+#verify{width: 265px;}
+#sample4_detailAddress{	width: 265px;}
+#sample4_roadAddress{	width: 265px;}
+#sample4_extraAddress{width: 103px;}
+#sample4_postcode{	width: 100px;}
+#email{	width: 230px;}
+#emailbox{	width: 120px;}
+#email_input{width: 103px;}

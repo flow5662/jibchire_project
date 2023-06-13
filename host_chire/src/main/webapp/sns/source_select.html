@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<style>
+.selectBoxList {
+      display: flex;
+      grid-gap: 30px;
+  }
+  .selectBox2 * { box-sizing: border-box; }
+  .selectBox2 {
+    position: relative;
+    z-index: 1;
+    width: 150px;
+    height: 35px;
+    border-radius: 4px;
+    border: 2px solid lightcoral;
+    /* background: url('https://freepikpsd.com/media/2019/10/down-arrow-icon-png-7-Transparent-Images.png') calc(100% - 7px) center no-repeat; */
+    background-size: 20px;
+    cursor: pointer;
+  }
+  
+  .selectBox2:before {
+    content: '💜';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); 
+    right: 5px; 
+    z-index: -1;
+  }
+
+  .selectBox2:after {
+    content: '';
+    display: block; 
+    width: 2px;
+    height: 100%; 
+    position: absolute; 
+    top: 0; 
+    right: 35px;
+    background: lightcoral;
+  }
+  
+  .selectBox2 .label {
+    display: flex;
+    align-items: center;
+    width: inherit;
+    height: inherit;
+    border: 0 none;
+    outline: 0 none;
+    padding-left: 15px;
+    background: transparent;
+    cursor: pointer;
+  }
+  
+  .selectBox2 .optionList {
+    position: absolute; 
+    top: 28px;
+    left: 0;
+    width: 100%;
+    background: lightcoral;
+    color: #fff;
+    list-style-type: none;
+    padding: 0;
+    border-radius: 6px;
+    overflow: hidden;
+    max-height: 0;
+    transition: .3s ease-in;
+  }
+  
+  .selectBox2 .optionList::-webkit-scrollbar {width: 6px;}
+  .selectBox2 .optionList::-webkit-scrollbar-track {background: transparent; }
+  .selectBox2 .optionList::-webkit-scrollbar-thumb {background: #303030; border-radius: 45px;}
+  .selectBox2 .optionList::-webkit-scrollbar-thumb:hover {background: #303030;}
+  
+  .selectBox2.active {
+      z-index: 10;
+  }
+
+  .selectBox2.active .optionList {
+    max-height: 500px;
+  }
+  
+  .selectBox2 .optionItem {
+    border-bottom: 1px dashed rgb(170, 72, 72);
+    padding: 5px 15px 5px;
+    transition: .1s;
+  }
+  
+  .selectBox2 .optionItem:hover {
+    background: rgb(175, 93, 93);
+  }
+  
+  .selectBox2 .optionItem:last-child {
+    border-bottom: 0 none;
+  }
+</style>
+<body>
+<div class="selectBoxList">
+        <!-- selectBox1 -->
+        <div class="box">
+            <div class="selectBox2 ">
+            <button class="label">fruits 🍊</button>
+            <ul class="optionList">
+                <li class="optionItem">apple</li>
+                <li class="optionItem">orange</li>
+                <li class="optionItem">grape</li>
+                <li class="optionItem">melon</li>
+            </ul>
+            </div>
+        </div>
+        <!-- selectBox2 -->
+        <div class="box">
+            <div class="selectBox2 ">
+            <button class="label">Colors 🎈</button>
+            <ul class="optionList">
+                <li class="optionItem">Red</li>
+                <li class="optionItem">orange</li>
+                <li class="optionItem">purple</li>
+                <li class="optionItem">green</li>
+            </ul>
+            </div>
+        </div>
+        <!-- selectBox3 -->
+        <div class="box">
+            <div class="selectBox2  ">
+            <button class="label">Foods 🍟</button>
+            <ul class="optionList">
+                <li class="optionItem">pizza</li>
+                <li class="optionItem">ramen</li>
+                <li class="optionItem">kimchi</li>
+                <li class="optionItem">somori gukbob</li>
+            </ul>
+            </div>
+        </div>
+    </div>
+<script>
+const label = document.querySelectorAll('.label');
+label.forEach(function(lb){
+    lb.addEventListener('click', e => {
+        let optionList = lb.nextElementSibling;
+        let optionItems = optionList.querySelectorAll('.optionItem');
+        clickLabel(lb, optionItems);
+    })
+});
+const clickLabel = (lb, optionItems) => {
+    if(lb.parentNode.classList.contains('active')) {
+        lb.parentNode.classList.remove('active');
+        optionItems.forEach((opt) => {
+            opt.removeEventListener('click', () => {
+                handleSelect(lb, opt)
+            })
+        })
+    } else {
+        lb.parentNode.classList.add('active');
+        optionItems.forEach((opt) => {
+            opt.addEventListener('click', () => {
+                handleSelect(lb, opt)
+            })
+        })
+    }
+}
+const handleSelect = (label, item) => {
+    label.innerHTML = item.textContent;
+    label.parentNode.classList.remove('active');
+}
+</script>
+</body>
+</html>

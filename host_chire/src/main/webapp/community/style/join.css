@@ -1,0 +1,43 @@
+/* reset css */ 
+* { margin : 0 ; padding : 0 ; font-family: 'NanumSquare';} 
+
+@import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
+body {	 position: relative;	 font-family: 'NanumSquare';	 color: black;}
+
+ /*둘 다 담는 박스*/
+.grid { 	 list-style: none;	 margin-left: -40px;}
+.gc {	 box-sizing: border-box;	 display: inline-block;	 margin-right: -0.25em;	 min-height: 1px;	
+  padding-left: 40px;	 vertical-align: top;}
+
+.gc--1-of-3 {	 width: 25%;} /*좌측메뉴*/
+.gc--2-of-3 {	 width: 75%; height: 980px; } /*우측메뉴*/
+.naccs {	 position: relative;	 max-width: 1280px;	 margin: 100px auto 0 auto;}
+
+/* 좌측 : 분류메뉴  */
+.naccs .menu div {	 padding: 15px 20px 15px 40px;	 margin-bottom: 10px;	 color: #303f9f;	 background: #E9E9E9;
+	 box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);	 cursor: pointer;	 position: relative;	 vertical-align: middle;
+	 font-weight: 700;	 transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1);}
+.naccs .menu div:hover {	 box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);}
+ 
+/* 왼쪽의 타이틀 옆의 작은네모 */
+.naccs .menu div span.light { 	 height: 10px;	 width: 10px;	 position: absolute;	 top: 24px;	 left: 15px;
+	 background-color: #303f9f;	 border-radius: 100%;	 transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1);}
+.naccs .menu div.active span.light {	 background-color: #fbc02d;	 left: 0;	 height: 100%;	 
+ 	width: 3px;	 top: 0;	 border-radius: 0;}
+.naccs .menu div.active {	 color: #fbc02d;	 padding: 15px 20px 15px 20px;}
+
+/* 우측:  내용에 관한 부분  */
+ul.nacc {	 position: relative;	 height: 0px;	 list-style: none;	 margin: 0;
+	 padding: 0;	 transition: 0.5s all cubic-bezier(0.075, 0.82, 0.165, 1);}
+ul.nacc li {	 opacity: 0;	 transform: translateX(50px);	 position: absolute;
+	 list-style: none;	 transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1);}
+ul.nacc li.active {	 transition-delay: 0.3s;	 z-index: 2;	 opacity: 1;	 transform: translateX(0px);}
+
+/* 약관동의 내용 */
+#agree{width: 750px; padding: 15px;}
+.agree_explain{width: 720px; padding: 10px; border-bottom: 2px solid darkgray;}
+
+/* 상세페이지 설명 */
+.explain{width: 720px; padding: 10px; font-size:10pt; background-color: #E9E9E9;  }
+
+

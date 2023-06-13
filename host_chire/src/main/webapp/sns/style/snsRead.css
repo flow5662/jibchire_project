@@ -1,0 +1,93 @@
+/*reset css*/
+* { margin : 0 ; padding : 0 ; font-family: 'NanumSquare';  } 
+a { text-decoration : none; }
+
+/*전체구조*/
+#wrap{width: 1280px; margin: 0 auto;}
+#wraper{width: 500px; margin: 0 auto;}
+#title{text-align: center;  margin: 30px auto;    height: 30px;}
+
+/*아이디 & 이미지*/
+.custpic{width: 90%;  margin: 15px auto 0 auto;}
+.custpic img{border-radius: 50%;  box-shadow: 0 1px 3px rgba(0,0,0,0.12),0 1px 2px rgba(0,0,0,0.24);}
+.custpic span{position:relative; top:-20px; font-weight: 800;}
+.custpic .updatemenu{display: none; float: right; }
+.custpic .updatelist{position: absolute; width: 100px;  left: 59%; z-index: 5;  background-color: white;
+    border: 1px solid white;  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    display: none; border-radius: 12px;}
+.custpic .updatelist li{display: block;    text-align: center;
+    padding: 10px 0;
+    border-radius: inherit;}
+.custpic .updatelist li:hover{ background-color: lightgrey; -webkit-transition: all 0.2s ease;}
+
+/*feed border style*/
+#snsthunbnail li.feed{display: block; width: 500px;  border: 1px solid white;  
+			 box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+ 			 transition: all 0.3s cubic-bezier(.25,.8,.25,1);     border-radius: 30px;
+    margin-top: 20px;}
+    
+/*이미지 슬라이더*/
+.slider {  position: relative;  overflow: hidden;  margin: 5px auto 0 auto; height: 450px;}
+.slider ul {  position: relative;  margin: 0;  padding: 0;  list-style: none;}
+.slider ul li {  position: relative;  display: block;  float: left;  margin: 0;padding: 0;  height: 450px; 
+	  text-align: center;  line-height: 300px; }
+a.control_prev, a.control_next {  position: absolute;top: 40%;  z-index: 999;  display: block;  padding: 4% 3%;
+  color: #fff;  font-size: 30px;  opacity: 0.8;  cursor: pointer;}
+a.control_prev:hover, a.control_next:hover {  opacity: 1;  -webkit-transition: all 0.2s ease;}
+a.control_prev {}
+a.control_next {  right: 0;}
+#snsthunbnail li.feed:hover{ box-shadow: 0 14px 18px rgba(29, 31, 25, 0.23), 0 10px 10px rgba(29, 31, 25, 0.23);}
+.pics{width: 450px; height: 450px; overflow: hidden; margin-left: -2px;}
+.pics>img{object-fit:cover;}
+
+/*내용 및 아이콘*/
+.txt{ width: 87%;   margin: 10px auto;}
+.txt .read{margin:5px 0;}
+.txt .read pre{font-size: 12pt; white-space: pre-wrap; margin:5px 0;}
+
+
+/*모든 댓글 select css*/
+.comment{    width: 87%;    margin: 5px auto;}
+.comment ul{display: block;}
+.comment ul li{display: inline-block;}
+.comment ul li.commentimg{}
+.comment ul li.commentimg img{border-radius: 50%;}
+.comment ul li.commentid{position: relative;     top: -7px;    font-size: 11pt;	font-weight: 600;     }
+.comment ul li.comnenttxt{position: relative;     top: -7px; font-size: 10pt;     margin-left: 10px;}
+.comment ul li.commenttime{position: relative;    top: -7px;font-size: 8px; }
+.comment ul li.commentupdate{position: relative;    top: -7px;font-size: 8px; }
+.comment ul li.commentdelete{position: relative;    top: -7px;font-size: 8px; }
+
+/*댓글입력*/
+.inputcomment {margin: 20px auto; width: 85%;}
+.inputcomment li{display: inline-block;}
+.inputcomment li:first-child{font-weight: 600; overflow: hidden; width: 70px; position: relative; top: 5px;}
+.inputcomment .commentwrite{height: 40px;     width: 260px;  padding-left: 1em; border: 1px solid white;  
+			 box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);}
+.inputcomment .commentsubmit{height: 42px;      width: 40px; border: 1px solid white;  
+			 box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);}
+/*내용이 들어가는 공간 */
+/* #text {width:80%; margin: 20px auto 0 auto; } */
+/* #like {width:80px;position: fixed; right: 230px;  top: 350px; } */
+/* #like li{display: block; text-align: center; font-size: 10pt; margin-top: 5px;} */
+/* #like li:nth-child(3n){margin-bottom:20px;} */
+
+
+/*글쓴이 정보가 들어가는 공간 */
+/* #writerinfo{ width:80%;  height: 100px; margin: 30px auto 0 auto;} */
+/* #writerinfo ul{position: relative; left: 115px; top:-95px;} */
+/* #writerinfo ul li{display: block;} */
+/* #writerinfo ul li:first-child{font-size: 18pt; font-weight: bold;} */
+/* #writerinfo ul li:nth-child(3){margin-top:8px;} */
+/* #writerinfo ul li:nth-child(3) img{position: relative; top:7px;} */
+/* #writerpic{width:100px; height:100%; border-radius: 50%; background-color: #A0A0A0; overflow: hidden; } */
+/* #writerpic>img{object-fit:cover; } */
+
+/*글쓴이일때 수정,삭제버튼 */
+/* #buttonforid{position: relative; left: 43%; margin-top:20px;} */
+/* input[type=button]{width:100px; height: 60px; background-color: #A0A0A0; border:1px solid #A0A0A0; border-radius: 5px;  */
+/* font-size:12pt; color: white; position:relative; } */
+
+/*
+border:1px solid #A0A0A0; border-radius: 5px; box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+*/

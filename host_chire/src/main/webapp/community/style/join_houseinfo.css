@@ -1,0 +1,17 @@
+/* reset css*/ 
+* { margin : 0 ; padding : 0 ; } 
+li { list-style : none ; display: inline-block; }
+a { text-decoration : none;}
+body{ font-family: 'NanumSquare'; }
+
+/* 큰박스들 크기 주기 */
+table{width:750px;  }
+h1{font-size: 28pt;}
+h4{font-size: 20pt;}
+input[type="submit"]{width: 100px; height: 30px; }
+
+
+/*왼쪽열 폭 주기*/
+#getinfo tr>td:first-child{width: 30%; }
+/*오른쪽 열만 가운데 정렬*/
+#getinfo tr>td:last-child{width: 70%; text-align: center;}

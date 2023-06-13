@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="mybts_bachi">
+
+<select id="bachi_req" parameterType="java.util.Map" resultType="dto.Bachi_match_Been">
+select * from gosu_req where cust_id = '${cust_id}' order by est_q_date asc limit ${startrow},10;
+</select>
+
+<select id="bachi_req_count" resultType="Integer">
+select count(*) from gosu_req where cust_id = #{cust_id};
+</select>
+
+<select id="bachi_req_det" resultType="dto.Bachi_match_Been">
+select * from gosu_req where est_id = #{est_id};
+</select>
+
+
+<select id="bachi_ans_det" resultType="dto.Bachi_match_AnsBeen">
+select * from gosu_ans where est_id = #{est_id};
+</select>
+
+<select id="bachi_market_product" resultType="dto.Bachi_market">
+select market_id,gosu_market.cust_id,gosu_market.gosu_id,market_picture,gosu_product.gosu_text,market_title,gosu_menu1,gosu_menu2,gosu_price from gosu_product inner join gosu_market on gosu_product.gosu_id = gosu_market.gosu_id where market_id = #{market_id} and  gosu_product.gosu_id = #{gosu_id};
+</select>
+
+</mapper>

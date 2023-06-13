@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context"
+
+
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd    http://www.springframework.org/schema/aop
+http://www.springframework.org/schema/aop/spring-aop.xsd    http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context.xsd    http://www.springframework.org/schema/jee
+http://www.springframework.org/schema/jee/spring-jee.xsd    http://www.springframework.org/schema/lang
+http://www.springframework.org/schema/lang/spring-lang.xs    http://www.springframework.org/schema/tx
+http://www.springframework.org/schema/tx/spring-tx.xsd    http://www.springframework.org/schema/util
+http://www.springframework.org/schema/util/spring-util.xsd    http://www.springframework.org/schema/task
+http://www.springframework.org/schema/task/spring-task.xsd">
+
+<!-- 자원관리 -->
+<context:annotation-config></context:annotation-config>
+<context:component-scan base-package="dao, svc">
+	<context:include-filter type="annotation" expression="org.springframework.stereotype.Repository" />
+	<context:include-filter type="annotation" expression="org.springframework.stereotype.Service" />
+	<context:include-filter type="annotation" expression="org.springframework.stereotype.Component" />
+</context:component-scan>
+
+<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
+    <property name="driverClassName" value="com.mysql.cj.jdbc.Driver" />
+    <property name="url" value="jdbc:mysql://43.201.98.55:3306/interior" />
+    <property name="username" value="minji" />
+    <property name="password" value="1234" />
+</bean>
+
+	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean"> 
+	        <property name="dataSource" ref="dataSource" />
+	        <property name="configLocation" value="classpath:config/configmybts.xml" /> 
+	</bean>
+	
+	<bean id="mybts_bachi" class="org.mybatis.spring.SqlSessionTemplate">
+	        <constructor-arg index="0" ref="sqlSessionFactory" />
+	</bean>
+
+
+</beans>

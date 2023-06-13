@@ -1,0 +1,42 @@
+/* reset css*/ 
+* { margin : 0 ; padding : 0 ; } 
+li { list-style : none ; display: inline-block; }
+a { text-decoration : none;}
+body{ font-family: 'NanumSquare'; }
+
+/* 큰박스들 크기 주기 */
+#wrap{width:700px; margin:0 auto;}
+table{width:700px;  }
+h1{font-size: 28pt;}
+h4{font-size: 20pt;}
+input[type="submit"]{width: 100px; height: 30px; }
+td{border:1px solid gray; }
+
+/*오른쪽 열만 가운데 정렬*/
+#getinfo tr>td:last-child{text-align: center;}
+
+/* 색상 선택하는 박스 공통적으로 색상주기*/
+input[id^="cb"] {display: none;} /* 본래의 체크박스 사라지게 하기*/
+input[id^="cb"] + label {display: inline-block;	width: 24px; height: 24px;	border-radius: 50%;	cursor: pointer;} /*대신 보일 박스의 크기 및 스타일*/
+input[id^="cb"]:checked + label { background-image: url("../img/community/png/check-line.png");} /*체크시 체크이미지 추가*/
+input[id="cb1"]:checked + label { background-image: url("../img/community/png/check-line-black.png");}
+/* 체크박스 각각 색상주기*/
+/* 검정은 체크시 흰색체크이미지로 보이도록, 화이트는 보더가 없으면 티가 안나니까 보더 줘야함*/
+input[id="cb1"] + label {background-color:#000000;}
+input[id="cb2"] + label {background-color:#FFFFFF; border:1px solid #000000 ;}
+input[id="cb3"] + label {background-color:#FF6666;}
+input[id="cb4"] + label {background-color:#FFB266;}
+input[id="cb5"] + label {background-color:#FFFF66;}
+input[id="cb6"] + label {background-color:#4C9900;}
+input[id="cb7"] + label {background-color:#004C99;}
+input[id="cb8"] + label {background-color:#4C0099;}
+input[id="cb9"] + label {background-color:#994C00;}
+input[id="cb10"] + label {background-color:#FF66B2;}
+
+/* 글작성 테이블*/
+#writing input[type="text"]{width: 100%; height: 30px; font-size: 16pt; }
+#writing textarea{width:100%;height: 300px;} 
+
+/*글제목과 내용 쓰는 공간 '칸에' 패딩주기. 직접 <input><textarea>태그에 주면 폭이 벗어남*/
+#title{padding-left:5px;}
+#textarea{ padding:10px;}

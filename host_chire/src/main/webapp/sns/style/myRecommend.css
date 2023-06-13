@@ -1,0 +1,60 @@
+/* reset css */ 
+* { margin : 0 ; padding : 0 ; } 
+li { list-style : none ;  display: inline-block;}
+a { text-decoration : none;}
+body{ font-family: 'NanumSquare'; }
+#wrap{width: 1255px; margin: 0 auto; } 
+
+/*게시판 첫번째 메뉴 및 select 스타일*/
+#wrap{width: 1280px; margin:0 auto;}
+#menu ul{margin-left: 10px;}
+#menu{height:40px; padding:10px; margin-top:40px; border:2px solid gray; border-radius: 10px; box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);	}
+select{border: 2px solid #fff; height: 40px;}
+option{background: #ffffff;  color: #000;  padding: 3px 0; font-size:12pt;}
+
+/*소제목 틀*/
+.subtitle{font-size: 20pt; font-weight: bold; padding-left: 1em; margin-top:30px;}
+
+/*스타일 들어간 select box*/
+section #mid{height: 100px; width: 1280px; margin-top: 20px;}
+.tabs {  display: flex;  position: relative;
+  box-shadow: 0 0 1px 0 rgba(24, 94, 224, 0.15), 0 6px 12px 0 rgba(24, 94, 224, 0.15);
+  padding: 0.75rem;  border-radius: 99px; }
+.tab {  display: flex;   align-items: center;    justify-content: center;	height: 54px;  width: 200px; 
+ font-size: 12pt;   z-index: 2; border-radius: 99px;  cursor: pointer;  transition: color 0.15s ease-in;}
+.glider {  position: absolute;  height: 54px;  width: 140px; z-index: 1;
+  border-radius: 99px;  transition: 0.25s ease-out; }
+input[type="radio"] {  display: none;}
+input[type="radio"]:checked + label {  color: #3F1709; filter:opacity(0.5) drop-shadow(0 0 0 #926b61);}
+input[id="radio-1"]:checked ~ .glider {	transform: translateX(0); background-color: #606060;}
+input[id="radio-2"]:checked ~ .glider {	transform: translateX(100%); background-color: #FDFDFD;}
+input[id="radio-3"]:checked ~ .glider {	transform: translateX(200%); background-color: #FFEAC4;}
+input[id="radio-4"]:checked ~ .glider { transform: translateX(300%); background-color: #FFFDA6;}
+input[id="radio-5"]:checked ~ .glider { transform: translateX(400%); background-color: #9C620A;}
+input[id="radio-6"]:checked ~ .glider { transform: translateX(500%); background-color: #FC685E;}
+input[id="radio-7"]:checked ~ .glider { transform: translateX(600%); background-color: #51904D;}
+input[id="radio-8"]:checked ~ .glider { transform: translateX(700%); background-color: #82B5E8;}
+input[id="radio-9"]:checked ~ .glider { transform: translateX(800%); background-color: #B783E5;}
+
+/*새로 만드는 틀
+#list{margin-top:30px;}*/
+.list>ul>li{display: inline-block; width: 30%; height: 330px; margin: 17px;}/*border: 1px solid gray; */
+ul{margin:0 auto;}
+
+/*썸네일 사진*/
+.thumbnail{width:100%; height:250px; overflow:hidden; border-radius: 5px;}
+.thumbnail img{width:100%; height:100%;object-fit:cover;}
+
+
+/*사진 아래 제목과 아이디*/
+.list>ul>li div{text-align: center;}/*border: 1px solid gray; */
+.title{width:90%; height: auto;  font-size: 13pt;  color: #000;  font-weight: bold;  margin: 5px auto;}
+.writer{width: 50%; height: auto; font-size:12pt; margin: 0 auto;}
+.view{width: 50%; height: 18px; font-size:10pt;  margin: 0 auto;}
+.bookmark{float: right;}
+
+/*제출 버튼*/
+input[type=button]{	border: solid 2px #E9E9E9; background-color: #E9E9E9; 
+	width: 100px;height: 40px; float:right;}
+/*페이징*/
+#pageList{text-align: center;}
