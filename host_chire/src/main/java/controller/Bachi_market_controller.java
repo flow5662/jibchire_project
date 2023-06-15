@@ -73,9 +73,9 @@ public class Bachi_market_controller {
 	
 	@RequestMapping("/bachi/bachi_match_anser_det")
 	public String bachi_match_ans_det(Model mod,HttpServletRequest request,@RequestParam int est_id)throws Exception {
-		List<Bachi_match_Been> list_req = bachi_mark.select_one_bachi_req(est_id);
-		List<Bachi_match_AnsBeen> list_ans = bachi_mark.select_est_ans(est_id);
-		mod.addAttribute("bachi_req_det", list_req);
+		List<Bachi_match_Been> list_req = bachi_mark.select_one_bachi_req(est_id);//질문
+		List<Bachi_match_AnsBeen> list_ans = bachi_mark.select_est_ans(est_id);//답변
+		mod.addAttribute("bachi_req_det", list_req); //jstl로 값을 출력하기 위함
 		mod.addAttribute("bachi_req_ans", list_ans);
 		String bachi_match_req_ans = "bachi_match_req_ans_det.jsp";
 		return bachi_match_req_ans;

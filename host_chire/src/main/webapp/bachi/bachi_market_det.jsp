@@ -64,24 +64,11 @@ String cust_pw = (String)session.getAttribute("cust_pw");
     		%>
     		<div class="flex-aside-left">
     		<%
-    		//out.println("<li id='market_id' name='market_id'>"+market_list_cust.get(0).getMarket_id()+"</li>");
-	    	//out.println("<li name='cust_id'>"+market_list_cust.get(0).getCust_id()+"</li>");
-	    	
 	    		String serverImagePath = request.getContextPath() + "/bachi/bachi_market/sm_" + market_list_cust.get(0).getMarket_picture();
 		%>
 		
     <img src='<%=serverImagePath%>' style='width:750px;height: 500px; border-radius:8px;'>
-		<%
-	    	
-	    	//out.println("<img src='../"+market_list_cust.get(0).getMarket_picture()+"' style='width:750px;height: 500px; border-radius:8px;'></li>");
-	    	//out.println("<li name='gosu_id'>"+market_list_cust.get(0).getGosu_id()+"</li>");
-	    	//out.println("<li name='market_text'>"+market_list_cust.get(0).getMarket_text()+"</li>");
-	    	//out.println("<li name='title'>"+market_list_cust.get(0).getMarket_title()+"</li>");
-	    	
-	    	//out.println("<li name='gosu_price'>"+market_list_cust.get(0).getGosu_price()+"원"+"</li>");
-	    		
-    		
-    		%>
+	
     			<div class="css-section-bottom-area">
     		<div class="css-section-bottom">
     		<div class="css-text-name">
@@ -314,7 +301,7 @@ function deleteMarket() {
 				    success: function(response) {
 				      // 상품삭제
 							 alert("상품이 삭제되었습니다.");
-						     	location.href="bachi_market.jsp";
+						     	location.href="bachi_market_list.jsp";
 							
 				    },
 				    error: function() {

@@ -11,7 +11,6 @@ public class BachiMatchCateAction implements Action { //매칭화면
 	 
 	 ActionForward forward = new ActionForward();
 	 String category = request.getParameter("category");
-	 System.out.println(category);
 
 	 forward.setPath("/bachi/bachi_match_cate.jsp?category="+ category);
 	 

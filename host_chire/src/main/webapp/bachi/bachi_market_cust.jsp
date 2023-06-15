@@ -110,7 +110,6 @@ String imageUrl = request.getContextPath() + "/bachi/bachi_market";
 		out.println("<div class='css-gosu-id'><a href='bachi_market_det_sel.jsp?market_id="+market_list.get(i).getMarket_id()+"'>"+market_list.get(i).getCust_id()+"</a></div>");
 		out.println("</div>");
 		out.println("<h3>"+"<a href='bachi_market_det_sel.jsp?market_id="+market_list.get(i).getMarket_id()+"'>"+market_list.get(i).getMarket_title()+"</a></h3>");
-		//out.println("<div class='css-price'><strong><font size='5pt'><a href='bachi_market_det.jsp?market_id="+market_list.get(i).getMarket_id()+"'>"+"<fmt:formatNumber value='"+market_list.get(i).getGosu_price()+"' pattern='#,###'/> "+"원~</a></strong></font></div>");
 		
 		%>
 		<div class='css-price'>
@@ -129,7 +128,6 @@ String imageUrl = request.getContextPath() + "/bachi/bachi_market";
 		out.println("</div>");
 %>
 
-<!-- 페이징 수정요망 -->
 	<section id="pageList">
 		<%if(nowPage<=1){ %>
 		◀

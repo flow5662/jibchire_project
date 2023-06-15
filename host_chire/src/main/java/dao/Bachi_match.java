@@ -40,11 +40,11 @@ public class Bachi_match {
 	    int insertCount = 0;
 
 	    try {
-	        pstmt = con.prepareStatement("select max(est_id) from gosu_req"); //사실상 autoincrement인 key값이기때문에, 필요없는 코드.
+	        pstmt = con.prepareStatement("select max(est_id) from gosu_req"); //현재 갯수 카운트
 	        rs = pstmt.executeQuery();
 
 	        sql = "insert into gosu_req(cust_id,gosu_menu1,gosu_menu2,est_q1,est_q2,est_q3) values(?,?,?,?,?,?)";
-	        //System.out.println("dfsdf");
+
 	        pstmt = con.prepareStatement(sql); //sql문 실행할 객체
 	        pstmt.setString(1, article.getCust_id()); //각각의 values의 값들 input
 	        pstmt.setString(2, article.getGosu_menu1());
@@ -54,7 +54,7 @@ public class Bachi_match {
 	        pstmt.setString(6,article.getEst_q3());
 
 	        
-	     insertCount=pstmt.executeUpdate(); // SQL문을 실행하고, 삽입된 행의 개수를 insertCount 변수에 저장합니다.
+	     insertCount=pstmt.executeUpdate(); 
 	    } catch (SQLException e) {
 	        e.printStackTrace();
 	    } finally {
@@ -103,8 +103,7 @@ public class Bachi_match {
 				while(rs.next()){
 					 been = new Bachi_match_Been(); //삽입할 객체 생성
 				
-					
-//					been = new Bachi_match_Been();
+
 					been.setEst_id(rs.getInt("est_id")); //객체에 select한 값 담기
 					been.setCust_id(rs.getString("gosu_req.cust_id")); // 참조 아이디
 					been.setEst_q1(rs.getString("est_q1"));
@@ -144,8 +143,7 @@ public class Bachi_match {
 				if(rs.next()){
 					Bachi_match_Been been = new Bachi_match_Been(); //삽입할 객체 생성
 				
-					
-//					been = new Bachi_match_Been();
+
 					been.setEst_id(rs.getInt("est_id")); //객체에 select한 값 담기
 					been.setCust_id(rs.getString("cust_id"));
 					been.setEst_q1(rs.getString("est_q1"));
@@ -214,11 +212,10 @@ public class Bachi_match {
 		    int insertCount = 0;
 
 	    try {
-	    	 pstmt = con.prepareStatement("select count(*) from gosu_ans"); //사실상 autoincrement인 key값이기때문에, 필요없는 코드.
+	    	 pstmt = con.prepareStatement("select count(*) from gosu_ans"); //현재 갯수 카운트
 		        rs = pstmt.executeQuery();
 
 	        sql = "insert into gosu_ans(est_id,cust_id,est_a1,est_a2,est_a3) values(?,?,?,?,?)";
-	        //System.out.println("dfsdf");
 	        pstmt = con.prepareStatement(sql); //sql문 실행할 객체
 	        pstmt.setInt(1, article.getEst_id()); //각각의 values의 값들 input
 	        pstmt.setString(2, article.getCust_id());
@@ -228,7 +225,7 @@ public class Bachi_match {
 	      
 
 	        
-	     insertCount=pstmt.executeUpdate(); // SQL문을 실행하고, 삽입된 행의 개수를 insertCount 변수에 저장합니다.
+	     insertCount=pstmt.executeUpdate(); // 실행 및 count
 	    } catch (SQLException e) {
 	        e.printStackTrace();
 	    } finally {

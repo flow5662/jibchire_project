@@ -65,10 +65,6 @@ request.setAttribute("market_list",market_list); //마켓에서 사용할 때 �
 
 request.getRequestDispatcher("bachi_market_serch.jsp").forward(request, response);
 
-
-
-
-
 %>
 </jsp:useBean>
 </body>

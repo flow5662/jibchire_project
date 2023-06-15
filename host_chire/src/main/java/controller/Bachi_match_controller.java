@@ -124,9 +124,6 @@ public class Bachi_match_controller extends javax.servlet.http.HttpServlet
 			forward.setPath("bachi_match_final.jsp");
 		}
 		
-		
-		//System.out.println(forward.getPath());
-		
 		if(forward != null){
 			if(forward.isRedirect()){
 				response.sendRedirect(forward.getPath());

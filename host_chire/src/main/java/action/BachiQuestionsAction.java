@@ -38,9 +38,6 @@ public class BachiQuestionsAction implements Action {
 		bachi_matchi_been.setEst_q3(typeStr); // 객체에 저장
 
 		
-		//bachi_matchi_been.setEst_q1(request.getParameter("serv"));
-		
-		//bachi_matchi_been.setEst_q3(request.getParameter("type"));
 		bachi_matchi_been.setGosu_menu1(request.getParameter("gosu_menu1"));
 		bachi_matchi_been.setGosu_menu2(request.getParameter("gosu_menu2"));
 		

@@ -17,7 +17,7 @@
 <head>
 <meta charset="UTF-8">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-<title>Insert title here</title>
+<title>바치상점</title>
 </head>
 <link rel="stylesheet" type="text/css" href="style/bachi_market_search.css">
 
@@ -70,7 +70,7 @@
 String search = request.getParameter("serch"); //검색창
 String value = request.getParameter("market_tag"); //전체/아이디 등 옵션
 
-
+/* 페이징 공식 */
 PageInfo pageInfo = (PageInfo)request.getAttribute("pageInfo");
 int listCount=pageInfo.getListCount();
 int nowPage = pageInfo.getPage();

@@ -15,13 +15,13 @@
 <body>
 <jsp:useBean id="market" class="dao.Gosu_mark">
 <%
+/*삭제*/
 String market_id = request.getParameter("market_id");
 int mark = 0;
 if(market_id != null && !market_id.isEmpty()) {
     mark = Integer.parseInt(market_id);
 }
-out.println(market_id);
-out.println(mark);
+
 market.gosu_middle_delete(mark);
 market.gosu_mark_del(mark);
 response.sendRedirect("bachi_market_list.jsp");

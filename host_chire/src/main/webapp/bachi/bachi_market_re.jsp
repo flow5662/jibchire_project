@@ -120,12 +120,12 @@ display: flex;
 
 <div class="lable-title">제목</div>
 <div class="css-market-title">
-<input type="text" name="market_title" placeholder="제목을 입력하세요." class="css-market-title-style css-title">
+<input type="text" name="market_title" placeholder="제목을 입력하세요." class="css-market-title-style css-title" required="required">
 </div>
 
 <div class="lable-title">상품/카테고리 선택</div>
 <div class="option-selected-css">
-<select name="gosu_id" id="gosu_id" class="css-gosu-option" multiple="multiple" size="6">
+<select name="gosu_id" id="gosu_id" class="css-gosu-option" multiple="multiple" size="6" required="required">
 <option></option>
 </select>
 <select name="gosu_menu1" class="css-gosu-option">
@@ -139,7 +139,7 @@ display: flex;
 </div>
 <div class="lable-title">상품 이미지 선택</div>
 <div class="file-css">
- <input type="file" id="file-input" name="filename">
+ <input type="file" id="file-input" name="filename" required="required">
 <input type="hidden" name="market_picture" id="file-path">
 <img id="image-preview">
 </div>

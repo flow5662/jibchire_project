@@ -9,16 +9,17 @@
 <title>고수메인</title>
 </head>
 <%
-String cust_id = "test123"; //request.getParameter("cust_id");
-String cust_pw = "test1234"; //requset.getParameter("cust_pw");
+String cust_id = "test123"; 
+String cust_pw = "test1234"; 
 session.setAttribute("cust_id",cust_id);
 session.setAttribute("cust_pw",cust_pw);
 %>
 <%
-// 이미지 파일이 저장된 경로를 가져옵니다.
-String imagePath = request.getServletContext().getRealPath("/image");
+/* 기능 없는 css만 완성 된 페이지, 추후 수정 필요!! */
 
-// 이미지 파일의 URL을 생성합니다.
+// 이미지 파일이 저장된 경로 가져옴
+String imagePath = request.getServletContext().getRealPath("/image");
+// 이미지 파일 url
 String imageUrl = request.getContextPath() + "/image/";
 
 %>
