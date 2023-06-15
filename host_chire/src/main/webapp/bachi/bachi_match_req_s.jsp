@@ -91,9 +91,9 @@ String est_id = request.getParameter("est_id");
 <form action="bachi_match_ans.bc">
 <input type="hidden" name="est_id" value="<%=est_id%>">
 <input type="hidden" name="cust_id" value="<%=id%>">
-<div class="cust"><div class="cust-text"><h4>목적</h4></div> <input type="text" name="est_a1"></div>
-<div class="cust"><div class="cust-text"><h4>장소</h4></div> <input type="text" name="est_a2"></div>
-<div class="cust"><div class="cust-text"><h4>유형</h4></div><input type="text" name="est_a3"></div>
+<div class="cust"><div class="cust-text"><h4>목적</h4></div> <input type="text" name="est_a1" required="required"></div>
+<div class="cust"><div class="cust-text"><h4>장소</h4></div> <input type="text" name="est_a2"  required="required"></div>
+<div class="cust"><div class="cust-text"><h4>유형</h4></div><input type="text" name="est_a3"  required="required"></div>
 <!-- const_date, payment는 답변 이후에 같이 db에 (update)입력되도록 -->
 <div class="list btn"><input type="submit" value="답변하기"></div>
 
