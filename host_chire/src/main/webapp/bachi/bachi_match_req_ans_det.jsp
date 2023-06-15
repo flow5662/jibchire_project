@@ -89,7 +89,7 @@ display: flex;
 	
 	<div class="list"><h3>-- 답변완료 --</h3></div>
 	
-	<c:if test="${empty bachi_ans_det}"><div class="not-found">답변이 아직 없습니다.</div></c:if>
+	<c:if test="${empty bachi_req_ans}"><div class="not-found">답변이 아직 없습니다.</div></c:if>
 <div class="article_section">
 <c:forEach items="${bachi_req_ans}" var="i">
 <div class="duplication">
